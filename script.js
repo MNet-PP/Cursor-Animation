@@ -18,4 +18,9 @@ document.addEventListener("mousemove", (e) => {
   //hide animation
   clearTimeout(timeout);
   timeout = setTimeout(mouseStopped, 1000);
+
+  //stop animation off the screen
+  document.addEventListener("mouseout", () => {
+    cursor.style.display = "none"
+  })
 });
